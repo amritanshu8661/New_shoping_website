@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spice Theory - Welcome to Jamrock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>The Spice Theory</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="cart-btn" id="cartBtn">
+                            Cart (<span id="cartCount">0</span>)
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Jamrock</h1>
+                <p class="hero-subtitle">Physician-crafted Caribbean spice blends combining medical knowledge with authentic flavors</p>
+                <div class="hero-badges">
+                    <span class="badge">88% Less Sodium</span>
+                    <span class="badge">Vegan-Friendly</span>
+                    <span class="badge">No MSG</span>
+                </div>
+                <button class="btn btn--primary btn--lg" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                    Shop Our Spices
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Featured Caribbean Spice Blends</h2>
+            <p class="section-subtitle">Physician-crafted with up to 88% less sodium than competing brands</p>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes -->
+    <section id="recipes" class="recipes-section">
+        <div class="container">
+            <h2 class="section-title">Caribbean Recipe Collection</h2>
+            <p class="section-subtitle">Authentic flavors made healthier with our low-sodium spice blends</p>
+            <div class="recipes-grid" id="recipesGrid">
+                <!-- Recipes will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Dr. Corrie -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Meet Dr. Corrie Amos</h2>
+                <p class="section-subtitle">Board-Certified Anesthesiologist & Culinary Enthusiast</p>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Physician-Crafted Excellence</h3>
+                        <p>
+                            Dr. Corrie Amos, a Jamaican-American anesthesiologist, founded The Spice Theory 
+                            to combine her medical expertise with her Caribbean heritage. Each spice blend 
+                            is carefully formulated to deliver maximum flavor while promoting heart health 
+                            through significantly reduced sodium content.
+                        </p>
+                        <p>
+                            Our mission is simple: bring you the authentic taste of the Caribbean without 
+                            compromising your health. Every blend is vegan-friendly, gluten-free, and 
+                            contains no artificial additives, preservatives, or MSG.
+                        </p>
+                    </div>
+                    <div class="health-benefits">
+                        <h3>Health Benefits</h3>
+                        <ul class="benefits-list">
+                            <li>Reduces risk of cardiovascular disease</li>
+                            <li>Supports heart-healthy cooking</li>
+                            <li>Maintains authentic Caribbean flavors</li>
+                            <li>No artificial preservatives or MSG</li>
+                            <li>Physician-formulated for optimal nutrition</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="social">Follow our journey: @shopspicetheory</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Have Questions?</h3>
+                    <p>We'd love to hear from you! Whether you need cooking advice or want to learn more about our physician-crafted blends.</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> hello@spicetheory.com</p>
+                        <p><strong>Social:</strong> @shopspicetheory</p>
+                        <p><strong>Mission:</strong> Healthy Caribbean flavors for everyone</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" class="form-control" rows="5" placeholder="Tell us about your cooking style or ask about our spices..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Stay Connected</h3>
+                <p>Get the latest recipes, health tips, and exclusive offers from Dr. Corrie</p>
+                <form class="newsletter-form">
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn--secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Shopping Cart</h3>
+                <button class="close-btn" id="closeCart" aria-label="Close cart">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                <div class="cart-total">
+                    <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="clearCart">Clear Cart</button>
+                <button class="btn btn--primary">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
